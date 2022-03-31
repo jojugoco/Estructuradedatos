@@ -1,0 +1,28 @@
+class Pila:
+    def __init__(self):
+        self.items = []
+        
+    def isEmpty(self):
+        return self.items == []
+    
+    def push(self, item):
+        self.items.append(item)
+        
+    def pop(self):
+        return self.items.pop()
+    
+    def top(self):
+        return self.items[len(self.items)-1]
+    
+    def sixe(self):
+        return len(self.items)
+    
+s = Stack()
+num=int (input("Ingrese la cantidad de datos: "))
+for i in range (num):
+    x=int(input("Ingrese un numero: "))
+    s.push(x)
+    
+print(s.isEmpty())
+s.pop()
+s.size()
