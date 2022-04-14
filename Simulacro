@@ -1,0 +1,44 @@
+class lista:
+    def __init__(self):
+        self.items=[]
+
+
+
+
+
+op=" "
+while op!="S" and op!="s"
+print("---Menu---")
+print("1. (A)ñadir numero a la estructura de datos: ")
+print("2. (C)argar los elementos de la estructura de datos con los numeros perfectos: ")
+print("3. (M)ostrar la cantidad de elementos de la lista: ")
+print("0. Sa(l)ir ")
+
+op=int(input("Digite un numero: "))
+
+if op=="A" or op=="a":
+    lista=[]
+    tam=int(input("Digite el tamaño de la lista: "))
+    for i in range(tam):
+        lista=int(input("Digite un numero: "))
+        
+if op=="C" or op=="c":
+    lista=[]
+    tam=int(input("Digite el tamaño de la lista: "))
+    i=1
+    j=1
+    for i in range(tam):
+        for i in range(i):
+            if(i%j==0):
+                acumulador=acumulador+j
+    if (acum==i):
+        lista=i
+        
+    print("La lista es: ",lista)
+    
+if op=="M" or op=="m":
+    print("La cantidad de elementos es: ", len(lista))
+    
+if op=="L" or op=="l":
+    print("Gracias, vuelva pronto!")
+        
