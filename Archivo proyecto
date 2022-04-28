@@ -1,0 +1,39 @@
+import os
+
+print("\nCrear un archivo")
+print("================")
+
+NOMBRE_ARCHIVO = 'datos.txt'
+
+archivo = open(NOMBRE_ARCHIVO, 'w') # abre el archivo datos.txt
+archivo.write("Augusto Saucedo 20/07/1990 Ingeniero en sistemas ")
+archivo.write("\nYohan Oliva 10/09/1995 Ingeniero electronico ")
+archivo.write("\nVictor Poppe 11/11/2000 Ingeniero industrial ")
+archivo.write("\nNicolas Vaca 30/01/1980 Ingeniero informatico ")
+archivo.write("\nRolo Martinez 26/09/1995 Arquitecto ")
+archivo.close()
+
+if NOMBRE_ARCHIVO in os.listdir("."):
+    print("\nArchivo creado en la ruta: \n\n\t{0}/{1}".format(
+        os.getcwd(), NOMBRE_ARCHIVO))
+else:
+    print ("El archivo no fue creado!!!\n")
+
+
+print ("\n\nLeer un archivo")
+print ("===============\n")
+
+archivo = open(NOMBRE_ARCHIVO, 'r')
+contenido = archivo.read()
+print (contenido)
+archivo.close()
+
+
+print ("\n\nIterar sobre un archivo")
+print ("=======================\n")
+
+archivo = open(NOMBRE_ARCHIVO, 'r')
+for linea in archivo:
+    print (linea)
+print ("\n")
+archivo.close()
